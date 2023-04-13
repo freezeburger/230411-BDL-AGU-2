@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:api":"json-server ./API/data.json -p 5050 -w",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s"
   },
   "private": true,
   "dependencies": {
@@ -18,11 +20,14 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "bootstrap": "^5.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
+    "json-server": "^0.17.3",
+    "@compodoc/compodoc": "^1.1.19",
     "@angular-devkit/build-angular": "^15.2.5",
     "@angular/cli": "~15.2.5",
     "@angular/compiler-cli": "^15.2.0",
