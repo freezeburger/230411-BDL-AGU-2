@@ -1,10 +1,30 @@
 {
-  "messages":[
+  "messages": [
     {
       "id": 1,
       "text": "Hello World",
       "date": 1681202237799
+    },
+    {
+      "text": "Test From Component",
+      "date": 1681474994597,
+      "id": 2
+    },
+    {
+      "text": "Test From Component",
+      "date": 1681482643755,
+      "id": 3
+    },
+    {
+      "text": "Test From Component",
+      "date": 1681482819191,
+      "id": 4
+    },
+    {
+      "text": "Test From Component",
+      "date": 1681482828191,
+      "id": 5
     }
   ],
-  "users":[]
+  "users": []
 }

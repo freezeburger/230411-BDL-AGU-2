@@ -3,12 +3,14 @@ import { NgImportModule } from '../ng-import.module';
 import { UiNavigationComponent } from './ui-navigation/ui-navigation.component';
 import { UiHeaderComponent } from './ui-header/ui-header.component';
 import { UiImageComponent } from './ui-image/ui-image.component';
+import { UiNotificationComponent } from './ui-notification/ui-notification.component';
 
 @NgModule({
   declarations: [
     UiNavigationComponent,
     UiHeaderComponent,
-    UiImageComponent
+    UiImageComponent,
+    UiNotificationComponent
   ],
   imports: [
     NgImportModule
@@ -16,7 +18,8 @@ import { UiImageComponent } from './ui-image/ui-image.component';
   exports: [
     UiNavigationComponent,
     UiHeaderComponent,
-    UiImageComponent
+    UiImageComponent,
+    UiNotificationComponent
   ]
 })
 export class UiModule { }

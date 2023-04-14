@@ -6,12 +6,14 @@
 
 <!-- <code>{{messageSrv.messages$ | async | json}}</code> -->
 
-<ng-container *ngIf=" (messageSrv.messages$ | async  ) as messages">
+<ng-container *ngIf=" (messageSrv.data$ | async  ) as messages">
 
   <div class="alert alert-info" *ngIf=" messages.length === 0 "> Pas de messages.</div>
 
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let msg of messages">{{msg | json}}</li>
   </ul>
+
+  <button (click)="send()">Send</button>
 
 </ng-container>

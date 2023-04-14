@@ -1,0 +1,6 @@
+
+<aside *ngIf="( notification.data$ | async) as notifications">
+  <button *ngIf=" notifications.length" (click)="clear()">Clear All</button>
+  <div class="alert alert-{{notif.level}}" *ngFor="let notif of notifications">{{notif.text}}</div>
+</aside>
+
