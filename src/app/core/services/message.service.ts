@@ -19,7 +19,9 @@ export class MessageService {
 
   constructor(
     private http:HttpClient
-  ) { }
+  ) {
+    setInterval( () => this.getData() , 3000 )
+  }
 
   private API = 'http://localhost:5050/messages';
   public getData(){

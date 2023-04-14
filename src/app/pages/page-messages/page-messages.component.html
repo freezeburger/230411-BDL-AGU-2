@@ -2,4 +2,16 @@
 
 <h2>Messages</h2>
 
-<code>{{viewMessages | json}}</code>
+<!-- <code>{{viewMessages | json}}</code> -->
+
+<!-- <code>{{messageSrv.messages$ | async | json}}</code> -->
+
+<ng-container *ngIf=" (messageSrv.messages$ | async  ) as messages">
+
+  <div class="alert alert-info" *ngIf=" messages.length === 0 "> Pas de messages.</div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let msg of messages">{{msg | json}}</li>
+  </ul>
+
+</ng-container>

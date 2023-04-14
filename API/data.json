@@ -1,4 +1,10 @@
 {
-  "messages":[],
+  "messages":[
+    {
+      "id": 1,
+      "text": "Hello World",
+      "date": 1681202237799
+    }
+  ],
   "users":[]
 }
