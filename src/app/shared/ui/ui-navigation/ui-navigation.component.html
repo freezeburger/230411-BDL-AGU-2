@@ -1,0 +1,8 @@
+
+<a class="m-1"
+   *ngFor="let route of routes"
+   [routerLink]="['/', route.path]"
+   routerLinkActive="selected"
+   >
+  {{ route.data?.linkLabel }}
+  </a>
