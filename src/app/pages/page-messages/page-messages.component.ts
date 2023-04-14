@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { BdlMessage } from 'src/app/core/interface/bdl-message';
 import { MessageService } from 'src/app/core/services/message.service';
 
@@ -9,10 +10,18 @@ import { MessageService } from 'src/app/core/services/message.service';
 })
 export class PageMessagesComponent {
 
-  public viewMessages:BdlMessage[] = []
+  //public viewMessages:BdlMessage[] = []
+  //private sub:Subscription;
 
   constructor( public messageSrv:MessageService){
-    this.messageSrv.messages$.subscribe( messages => this.viewMessages = messages)
+    //this.sub = this.messageSrv.messages$.subscribe( messages => this.viewMessages = messages)
+
+    //
+    //this.messageSrv.getData();
+  }
+
+  ngOnDestroy(){
+    //this.sub.unsubscribe()
   }
 
 
