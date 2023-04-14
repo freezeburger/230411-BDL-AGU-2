@@ -140,8 +140,24 @@ export class AppComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">
+        <pre class="line-numbers"><code class="language-html">&lt;app-ui-header color&#x3D;&quot;primary&quot; retracted&gt; Text &lt;/app-ui-header&gt;
+
+&lt;app-ui-navigation retracted&gt;&lt;/app-ui-navigation&gt;
+
 &lt;router-outlet&gt;&lt;/router-outlet&gt;
+
+&lt;!-- &lt;app-ui-image source&#x3D;&quot;https://plocploc/150&quot; fallback&gt;&lt;/app-ui-image&gt;
+
+
+&lt;app-ui-image source&#x3D;&quot;https://plocploc/150&quot;
+              uiImgFallback fallback&#x3D;&quot;https://opensource.google/static/images/projects/os-projects-angular.svg&quot;&gt;&lt;/app-ui-image&gt;
+
+&lt;app-ui-image emphasis&gt;&lt;/app-ui-image&gt;
+&lt;app-ui-image source&#x3D;&quot;https://picsum.photos/150&quot;&gt;&lt;/app-ui-image&gt;
+&lt;app-ui-image source&#x3D;&quot;https://picsum.photos/150&quot; [size]&#x3D;&quot;{h:200,w:500}&quot; emphasis&gt;
+&lt;/app-ui-image&gt;
+ --&gt;
+
 </code></pre>
     </div>
 
@@ -177,9 +193,9 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'PageHomeComponent', 'selector': 'app-page-home'},{'name': 'PageLoginComponent', 'selector': 'app-page-login'},{'name': 'PageMessagesComponent', 'selector': 'app-page-messages'}];
-    var DIRECTIVES = [];
+        var COMPONENT_TEMPLATE = '<div><app-ui-header color="primary" retracted> Text </app-ui-header><app-ui-navigation retracted></app-ui-navigation><router-outlet></router-outlet><!-- <app-ui-image source="https://plocploc/150" fallback></app-ui-image><app-ui-image source="https://plocploc/150"              uiImgFallback fallback="https://opensource.google/static/images/projects/os-projects-angular.svg"></app-ui-image><app-ui-image emphasis></app-ui-image><app-ui-image source="https://picsum.photos/150"></app-ui-image><app-ui-image source="https://picsum.photos/150" [size]="{h:200,w:500}" emphasis></app-ui-image> --></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'PageHomeComponent', 'selector': 'app-page-home'},{'name': 'PageLoginComponent', 'selector': 'app-page-login'},{'name': 'PageMessagesComponent', 'selector': 'app-page-messages'},{'name': 'UiHeaderComponent', 'selector': 'app-ui-header'},{'name': 'UiImageComponent', 'selector': 'app-ui-image'},{'name': 'UiNavigationComponent', 'selector': 'app-ui-navigation'}];
+    var DIRECTIVES = [{'name': 'RetractedDirective', 'selector': 'app-ui-header[retracted]'},{'name': 'UiImageEmphasisDirective', 'selector': 'app-ui-image[emphasis]'},{'name': 'UiImageFallbackDirective', 'selector': 'app-ui-image[fallback],app-ui-image[uiImgFallback]'}];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>
 <script src="../js/tree.js"></script>

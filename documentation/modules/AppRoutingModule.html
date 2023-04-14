@@ -73,9 +73,41 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;;;
+import { BdlRoutes } from &#x27;./core/interface/bdl-routes&#x27;;
 
-const routes: Routes &#x3D; [];
+const routes: Routes &#x3D; [
+  {
+    path:&#x27;home&#x27;,
+    loadChildren:() &#x3D;&gt; &quot;import(&#x27;./pages/page-home/page-home.module&#x27;).then( m &#x3D;&gt; m.PageHomeModule )&quot;,
+    title:&#x27;BDl - Home&#x27;,
+    data:{
+      linkLabel:&#x27;Retour Home&#x27;
+    }
+  },
+  {
+    path:&#x27;messages&#x27;,
+    loadChildren:() &#x3D;&gt; &quot;import(&#x27;./pages/page-messages/page-messages.module&#x27;).then( m &#x3D;&gt; m.PageMessagesModule )&quot;,
+    title:&#x27;BDl - Messages&#x27;,
+    data:{
+      linkLabel:&#x27;Messages&#x27;
+    }
+  },
+  {
+    path:&#x27;connection&#x27;,
+    loadChildren:() &#x3D;&gt; &quot;import(&#x27;./pages/page-login/page-login.module&#x27;).then( m &#x3D;&gt; m.PageLoginModule )&quot;,
+    title:&#x27;BDl - Identification&#x27;,
+    data:{
+      linkLabel:&#x27;Login&#x27;
+    }
+  },
+  {
+    path:&#x27;**&#x27;,
+    title:&#x27;Redirect&#x27;,
+    redirectTo:&#x27;login&#x27;,
+    pathMatch:&#x27;full&#x27;
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

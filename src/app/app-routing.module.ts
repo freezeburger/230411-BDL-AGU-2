@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { PageHomeComponent } from './pages/page-home/page-home.component';
-import { PageMessagesComponent } from './pages/page-messages/page-messages.component';
-import { PageLoginComponent } from './pages/page-login/page-login.component';
+import { RouterModule, Routes } from '@angular/router';;
 import { BdlRoutes } from './core/interface/bdl-routes';
 
-const routes: BdlRoutes = [
+const routes: Routes = [
   {
     path:'home',
     loadChildren:() => import('./pages/page-home/page-home.module').then( m => m.PageHomeModule ),

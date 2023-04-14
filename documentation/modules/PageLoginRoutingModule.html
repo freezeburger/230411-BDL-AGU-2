@@ -74,8 +74,23 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { PageLoginComponent } from &#x27;./page-login.component&#x27;;
 
-const routes: Routes &#x3D; [];
+const routes: Routes &#x3D; [
+  {
+    path:&#x27;login&#x27;,
+    component:PageLoginComponent
+  },
+  {
+    path:&#x27;register&#x27;,
+    component:PageLoginComponent
+  },
+  {
+    path:&#x27;**&#x27;,
+    redirectTo:&#x27;login&#x27;,
+    pathMatch:&#x27;prefix&#x27;
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
