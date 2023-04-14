@@ -8,7 +8,7 @@ import { BdlRoutes } from './core/interface/bdl-routes';
 const routes: BdlRoutes = [
   {
     path:'home',
-    component:PageHomeComponent,
+    loadChildren:() => import('./pages/page-home/page-home.module').then( m => m.PageHomeModule ),
     title:'BDl - Home',
     data:{
       linkLabel:'Retour Home'
@@ -16,7 +16,7 @@ const routes: BdlRoutes = [
   },
   {
     path:'messages',
-    component:PageMessagesComponent,
+    loadChildren:() => import('./pages/page-messages/page-messages.module').then( m => m.PageMessagesModule ),
     title:'BDl - Messages',
     data:{
       linkLabel:'Messages'
@@ -24,7 +24,7 @@ const routes: BdlRoutes = [
   },
   {
     path:'connection',
-    component:PageLoginComponent,
+    loadChildren:() => import('./pages/page-login/page-login.module').then( m => m.PageLoginModule ),
     title:'BDl - Identification',
     data:{
       linkLabel:'Login'
