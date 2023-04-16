@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --code-coverage",
     "start:api":"json-server ./API/data.json -p 5050 -w",
     "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s"
   },
