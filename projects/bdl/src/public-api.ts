@@ -19,4 +19,8 @@ export * from './lib/ui/ui-header/ui-header.component';
 export * from './lib/ui/ui-image/ui-image.component';
 export * from './lib/ui/ui-navigation/ui-navigation.component';
 export * from './lib/ui/ui-notification/ui-notification.component';
+export * from './lib/ui/ui-button/ui-button.component';
+
+// Directives
+export * from './lib/ui/directives/inactive.directive';
 

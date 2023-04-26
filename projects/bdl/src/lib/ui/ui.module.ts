@@ -4,13 +4,17 @@ import { UiNavigationComponent } from './ui-navigation/ui-navigation.component';
 import { UiHeaderComponent } from './ui-header/ui-header.component';
 import { UiImageComponent } from './ui-image/ui-image.component';
 import { UiNotificationComponent } from './ui-notification/ui-notification.component';
+import { UiButtonComponent } from './ui-button/ui-button.component';
+import { InactiveDirective } from './directives/inactive.directive';
 
 @NgModule({
   declarations: [
     UiNavigationComponent,
     UiHeaderComponent,
     UiImageComponent,
-    UiNotificationComponent
+    UiNotificationComponent,
+    UiButtonComponent,
+    InactiveDirective
   ],
   imports: [
     NgImportModule
@@ -19,7 +23,9 @@ import { UiNotificationComponent } from './ui-notification/ui-notification.compo
     UiNavigationComponent,
     UiHeaderComponent,
     UiImageComponent,
-    UiNotificationComponent
+    UiNotificationComponent,
+    UiButtonComponent,
+    InactiveDirective
   ]
 })
 export class UiModule { }
