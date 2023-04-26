@@ -2,7 +2,7 @@ import { Component, Optional } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
 @Component({
-  selector: 'app-ui-navigation',
+  selector: 'bdl-ui-navigation',
   templateUrl: './ui-navigation.component.html',
   styleUrls: ['./ui-navigation.component.scss']
 })

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { UiModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [
@@ -6,6 +7,7 @@ import { NgModule } from '@angular/core';
   imports: [
   ],
   exports: [
+    UiModule
   ]
 })
 export class BdlModule { }

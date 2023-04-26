@@ -1,0 +1,15 @@
+:host{
+  display: flex;
+  height: 5vh;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.selected{
+    font-weight: bold;
+    border-bottom: 3px solid darkblue;
+  }
+}
