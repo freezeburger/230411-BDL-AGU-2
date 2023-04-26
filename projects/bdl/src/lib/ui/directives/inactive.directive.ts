@@ -1,12 +1,16 @@
-import { Directive } from '@angular/core';
+import { AfterViewInit, Directive, Host } from '@angular/core';
+import { UiButtonComponent } from '../ui-button/ui-button.component';
 
 @Directive({
-  selector: '[bdlInactive]'
+  selector: 'bdl-ui-button[bdlInactive]'
 })
 export class InactiveDirective {
 
-  constructor() {
-    console.log(this)
+  constructor(
+    @Host() private bdlButton:UiButtonComponent
+  ) {
+    this.bdlButton.disabled = true;
   }
+
 
 }
