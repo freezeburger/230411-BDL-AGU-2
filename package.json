@@ -8,7 +8,12 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --code-coverage",
     "start:api":"json-server ./API/data.json -p 5050 -w",
-    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s"
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s --output ./documentation/application",
+    "bdl:build":"ng build --project=bdl",
+    "bdl:test":"ng test --project=bdl",
+    "bdl:doc":"compodoc -p ./projects/bdl/tsconfig.doc.json -s --output ./documentation/bdl-lib",
+    "prebdl:pack":"npm run bdl:build",
+    "bdl:pack":"npm pack ./dist/bdl"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +43,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^15.2.2",
     "typescript": "~4.9.4"
   }
 }

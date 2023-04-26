@@ -12,20 +12,14 @@ import { NotificationCommandType, NotificationService } from 'src/app/core/servi
 })
 export class PageMessagesComponent {
 
-  //public viewMessages:BdlMessage[] = []
-  //private sub:Subscription;
-
   constructor(
     public messageSrv:MessageService,
     private notification:NotificationService
     ){
-    //this.sub = this.messageSrv.messages$.subscribe( messages => this.viewMessages = messages)
-
-    //
-    //this.messageSrv.getData();
   }
 
   send(){
+
     this.notification.execute(NotificationCommandType.NOTIFY, {
       level:BdlNotificationLevel.INFO,
       text:'Sending Message'
@@ -39,9 +33,6 @@ export class PageMessagesComponent {
     })
   }
 
-  ngOnDestroy(){
-    //this.sub.unsubscribe()
-  }
 
 
 }

@@ -144,6 +144,8 @@ export class AppComponent {
 
 &lt;app-ui-navigation retracted&gt;&lt;/app-ui-navigation&gt;
 
+&lt;app-ui-notification&gt;&lt;/app-ui-notification&gt;
+
 &lt;router-outlet&gt;&lt;/router-outlet&gt;
 
 &lt;!-- &lt;app-ui-image source&#x3D;&quot;https://plocploc/150&quot; fallback&gt;&lt;/app-ui-image&gt;
@@ -193,8 +195,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-ui-header color="primary" retracted> Text </app-ui-header><app-ui-navigation retracted></app-ui-navigation><router-outlet></router-outlet><!-- <app-ui-image source="https://plocploc/150" fallback></app-ui-image><app-ui-image source="https://plocploc/150"              uiImgFallback fallback="https://opensource.google/static/images/projects/os-projects-angular.svg"></app-ui-image><app-ui-image emphasis></app-ui-image><app-ui-image source="https://picsum.photos/150"></app-ui-image><app-ui-image source="https://picsum.photos/150" [size]="{h:200,w:500}" emphasis></app-ui-image> --></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'PageHomeComponent', 'selector': 'app-page-home'},{'name': 'PageLoginComponent', 'selector': 'app-page-login'},{'name': 'PageMessagesComponent', 'selector': 'app-page-messages'},{'name': 'UiHeaderComponent', 'selector': 'app-ui-header'},{'name': 'UiImageComponent', 'selector': 'app-ui-image'},{'name': 'UiNavigationComponent', 'selector': 'app-ui-navigation'}];
+        var COMPONENT_TEMPLATE = '<div><app-ui-header color="primary" retracted> Text </app-ui-header><app-ui-navigation retracted></app-ui-navigation><app-ui-notification></app-ui-notification><router-outlet></router-outlet><!-- <app-ui-image source="https://plocploc/150" fallback></app-ui-image><app-ui-image source="https://plocploc/150"              uiImgFallback fallback="https://opensource.google/static/images/projects/os-projects-angular.svg"></app-ui-image><app-ui-image emphasis></app-ui-image><app-ui-image source="https://picsum.photos/150"></app-ui-image><app-ui-image source="https://picsum.photos/150" [size]="{h:200,w:500}" emphasis></app-ui-image> --></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'PageHomeComponent', 'selector': 'app-page-home'},{'name': 'PageLoginComponent', 'selector': 'app-page-login'},{'name': 'PageMessagesComponent', 'selector': 'app-page-messages'},{'name': 'UiHeaderComponent', 'selector': 'app-ui-header'},{'name': 'UiImageComponent', 'selector': 'app-ui-image'},{'name': 'UiNavigationComponent', 'selector': 'app-ui-navigation'},{'name': 'UiNotificationComponent', 'selector': 'app-ui-notification'}];
     var DIRECTIVES = [{'name': 'RetractedDirective', 'selector': 'app-ui-header[retracted]'},{'name': 'UiImageEmphasisDirective', 'selector': 'app-ui-image[emphasis]'},{'name': 'UiImageFallbackDirective', 'selector': 'app-ui-image[fallback],app-ui-image[uiImgFallback]'}];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

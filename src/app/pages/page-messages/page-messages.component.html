@@ -2,10 +2,6 @@
 
 <h2>Messages</h2>
 
-<!-- <code>{{viewMessages | json}}</code> -->
-
-<!-- <code>{{messageSrv.messages$ | async | json}}</code> -->
-
 <ng-container *ngIf=" (messageSrv.data$ | async  ) as messages">
 
   <div class="alert alert-info" *ngIf=" messages.length === 0 "> Pas de messages.</div>
