@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { UiModule } from './ui/ui.module';
 import { UtilsModule } from './utils/utils.module';
 import { NgImportModule } from './ng-import.module';
+import { BdlModule } from 'bdl';
 
 @NgModule({
   exports: [
-    UiModule,
+    BdlModule,
     UtilsModule,
     NgImportModule
   ]

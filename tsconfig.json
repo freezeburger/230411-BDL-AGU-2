@@ -4,8 +4,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "bdl": [
+      "@bdl": [
         "dist/bdl"
+      ],
+      "bdl": [
+        "projects/bdl/src/public-api.ts"
       ]
     },
     "outDir": "./dist/out-tsc",

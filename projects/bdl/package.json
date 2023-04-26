@@ -1,8 +1,11 @@
 {
   "name": "bdl",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "peerDependencies": {
+    "@angular/router": "^15.2.0",
     "@angular/common": "^15.2.0",
+    "@angular/common/http": "^15.2.0",
+    "@angular/forms": "^15.2.0",
     "@angular/core": "^15.2.0"
   },
   "dependencies": {
