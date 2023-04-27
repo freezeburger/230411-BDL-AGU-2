@@ -9,6 +9,9 @@
       ],
       "bdl": [
         "projects/bdl/src/public-api.ts"
+      ],
+      "bdl-auth": [
+        "dist/bdl-auth"
       ]
     },
     "outDir": "./dist/out-tsc",
