@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { MessageService } from './services/message.service';
 import { NotificationService } from './services/notification.service';
@@ -18,6 +18,11 @@ import { AuthDelegateService } from './services/auth-delegate.service';
     {
       provide:TOKEN_AUTH_SERVICE,
       useClass:AuthDelegateService
+    },
+    {
+      provide:APP_INITIALIZER,
+      useValue: () => console.log('Angualr is about to start rendering '),
+      multi:true
     }
   ]
 })
