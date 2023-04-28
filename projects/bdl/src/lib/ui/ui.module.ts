@@ -8,6 +8,7 @@ import { UiButtonComponent } from './ui-button/ui-button.component';
 import { InactiveDirective } from './directives/inactive.directive';
 import { UiButtonOptionsComponent } from './ui-button-options/ui-button-options.component';
 import { UiLayoutComponent } from './ui-layout/ui-layout.component';
+import { UiLayoutContentComponent } from './ui-layout-content/ui-layout-content.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UiLayoutComponent } from './ui-layout/ui-layout.component';
     UiButtonComponent,
     InactiveDirective,
     UiButtonOptionsComponent,
-    UiLayoutComponent
+    UiLayoutComponent,
+    UiLayoutContentComponent
   ],
   imports: [
     NgImportModule
@@ -31,7 +33,8 @@ import { UiLayoutComponent } from './ui-layout/ui-layout.component';
     UiButtonComponent,
     InactiveDirective,
     UiButtonOptionsComponent,
-    UiLayoutComponent
+    UiLayoutComponent,
+    UiLayoutContentComponent
   ]
 })
 export class UiModule { }

@@ -22,6 +22,7 @@ export * from './lib/ui/ui-notification/ui-notification.component';
 export * from './lib/ui/ui-button/ui-button.component';
 export * from './lib/ui/ui-button-options/ui-button-options.component';
 export * from './lib/ui/ui-layout/ui-layout.component';
+export * from './lib/ui/ui-layout-content/ui-layout-content.component';
 
 // Directives
 export * from './lib/ui/directives/inactive.directive';

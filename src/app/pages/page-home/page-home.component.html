@@ -1,20 +1,23 @@
 
 
+
 <bdl-ui-layout>
 
-  <h1 class="header">Home</h1>
+  <layout-content header>Home</layout-content>
 
-  <bdl-ui-button>
-    <bdl-ui-button-options>
-      Hello  World ! <button>Documentation</button>
-    </bdl-ui-button-options>
-    Connect
-  </bdl-ui-button>
+  <layout-content>
+    <bdl-ui-button>
+      <bdl-ui-button-options>
+        Hello  World ! <button>Documentation</button>
+      </bdl-ui-button-options>
+      Connect
+    </bdl-ui-button>
+  </layout-content>
 
-  <ng-container class="menu">
+  <layout-content menu>
     <bdl-ui-button level="CONFIG"> Connect </bdl-ui-button>
     <bdl-ui-button level="CANCEL" [disabled]="true"> Connect </bdl-ui-button>
-  </ng-container>
+  </layout-content>
 
 </bdl-ui-layout>
 

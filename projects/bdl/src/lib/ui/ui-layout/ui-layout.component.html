@@ -12,7 +12,7 @@
 <!-- Header -->
 <ng-template #header>
   <bdl-ui-header>
-    <ng-content select=".header"></ng-content>
+    <ng-content select="layout-content[header]"></ng-content>
   </bdl-ui-header>
   <bdl-ui-navigation></bdl-ui-navigation>
   <bdl-ui-notification></bdl-ui-notification>
@@ -28,13 +28,13 @@
 <!-- Footer -->
 <ng-template #footer>
   <footer>
-    <ng-content select=".footer"></ng-content>
+    <ng-content select="layout-content[header]"></ng-content>
   </footer>
 </ng-template>
 
 <!-- Menu -->
 <ng-template #menu>
   <aside>
-    <ng-content select=".menu"></ng-content>
+    <ng-content select="layout-content[menu]"></ng-content>
   </aside>
 </ng-template>
