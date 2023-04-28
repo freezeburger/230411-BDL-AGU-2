@@ -10,7 +10,8 @@ import { AbstractControl } from '@angular/forms';
 @Component({
   selector: 'bdl-auth',
   templateUrl: `./bdl-auth.component.html`,
-  styles: [
+  styleUrls: [
+    './styles.css'
   ]
 })
 export class BdlAuthComponent {
