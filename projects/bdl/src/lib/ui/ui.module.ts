@@ -9,6 +9,8 @@ import { InactiveDirective } from './directives/inactive.directive';
 import { UiButtonOptionsComponent } from './ui-button-options/ui-button-options.component';
 import { UiLayoutComponent } from './ui-layout/ui-layout.component';
 import { UiLayoutContentComponent } from './ui-layout-content/ui-layout-content.component';
+import { AsPageTitleDirective } from './directives/as-page-title.directive';
+import { RevealMenuDirective } from './directives/reveal-menu.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UiLayoutContentComponent } from './ui-layout-content/ui-layout-content.
     InactiveDirective,
     UiButtonOptionsComponent,
     UiLayoutComponent,
-    UiLayoutContentComponent
+    UiLayoutContentComponent,
+    AsPageTitleDirective,
+    RevealMenuDirective
   ],
   imports: [
     NgImportModule
@@ -34,7 +38,9 @@ import { UiLayoutContentComponent } from './ui-layout-content/ui-layout-content.
     InactiveDirective,
     UiButtonOptionsComponent,
     UiLayoutComponent,
-    UiLayoutContentComponent
+    UiLayoutContentComponent,
+    AsPageTitleDirective,
+    RevealMenuDirective
   ]
 })
 export class UiModule { }

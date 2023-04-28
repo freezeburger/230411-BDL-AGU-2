@@ -26,4 +26,6 @@ export * from './lib/ui/ui-layout-content/ui-layout-content.component';
 
 // Directives
 export * from './lib/ui/directives/inactive.directive';
+export * from './lib/ui/directives/as-page-title.directive';
+export * from './lib/ui/directives/reveal-menu.directive';
 
