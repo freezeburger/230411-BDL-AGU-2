@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BdlAuthComponent } from './components/bdl-auth.component';
 import { BdlAuthService, TOKEN_DEFAULT_AUTH_SERVICE } from '../public-api';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -10,7 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BdlAuthComponent
   ],
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   exports: [
     BdlAuthComponent

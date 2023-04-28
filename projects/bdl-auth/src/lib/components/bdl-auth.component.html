@@ -1,4 +1,7 @@
 <div class="card d-flex flex-column p-3 m-5">
+  <div class="alert alert-info">
+    {{ authForm.controls.email.errors | json }}
+  </div>
   <form [formGroup]="authForm">
     <input type="text" class="form-control m-1" placeholder="Your email" formControlName="email">
     <input type="text" class="form-control m-1" placeholder="Your password" formControlName="password">
