@@ -3,7 +3,8 @@
   <layout-content header asPageTitle>Login</layout-content>
 
   <layout-content>
-    <bdl-auth></bdl-auth>
+    {{ initialCredentialsValues | json }}
+    <bdl-auth [(credentials)]="initialCredentialsValues"></bdl-auth>
   </layout-content>
 
   <layout-content menu>

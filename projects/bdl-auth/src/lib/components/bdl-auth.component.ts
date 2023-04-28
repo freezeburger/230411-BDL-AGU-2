@@ -48,6 +48,10 @@ export class BdlAuthComponent {
     }
   )
 
+  ngOnChanges(){
+    this.authForm.setValue(this.credentials)
+  }
+
   /*  authForm = new FormGroup({
      email: new FormControl(this.credentials.email, [Validators.required, this.validateBdl ]),
      password: new FormControl(this.credentials.password, [Validators.required]),
