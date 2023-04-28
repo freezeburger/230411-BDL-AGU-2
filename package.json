@@ -18,8 +18,8 @@
     "bdl-auth:build": "ng build --project=bdl-auth",
     "bdl-auth:pack": "npm pack ./dist/bdl-auth",
     "bdl-auth:test": "ng test --project=bdl-auth",
-    "bdl-auth:doc": "compodoc -p ./projects/bdl-auth/tsconfig.doc.json -s --output ./documentation/bdl-auth"
-
+    "bdl-auth:doc": "compodoc -p ./projects/bdl-auth/tsconfig.doc.json -s --output ./documentation/bdl-auth",
+    "wc-bdl-auth:build": "ng build --project=wc-bdl-auth"
   },
   "private": true,
   "dependencies": {
