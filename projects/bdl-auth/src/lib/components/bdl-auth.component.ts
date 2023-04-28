@@ -2,9 +2,10 @@ import { Component, Inject, Optional, Input, Output, EventEmitter } from '@angul
 import { BdlAuthentificationService } from '../interfaces/bdl-authentification-service';
 import { TOKEN_DEFAULT_AUTH_SERVICE } from '../tokens/default-auth-service.tokens';
 import { TOKEN_AUTH_SERVICE } from '../tokens/auth-service.tokens';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { BdlCredentials } from '../interfaces/bdl-credentials';
 import { switchMap, tap } from 'rxjs';
+import { AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'bdl-auth',
@@ -29,12 +30,19 @@ export class BdlAuthComponent {
     @Optional() @Inject(TOKEN_AUTH_SERVICE) externalService: BdlAuthentificationService
   ) {
     this.effectiveService = externalService || defaultService;
+    // X
     this.authForm.valueChanges.subscribe(value => this.credentialsChange.next(value as BdlCredentials))
   }
 
+  validateBdl: ValidatorFn = (control: AbstractControl) => {
+
+    if (control.value.includes('@bdl.lu')) return null; // VALID
+    return { bdlError: "Invalid User name " } // INVALID
+  }
+
   authForm = new FormGroup({
-    email: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required]),
+    email: new FormControl(this.credentials.email, [Validators.required, this.validateBdl ]),
+    password: new FormControl(this.credentials.password, [Validators.required]),
   });
 
   auth() {
@@ -42,6 +50,8 @@ export class BdlAuthComponent {
       () => this.authEvent.next(this.authForm.value as BdlCredentials)
     );
   }
+
+
 
 
 
