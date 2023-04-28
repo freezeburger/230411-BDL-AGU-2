@@ -43,3 +43,86 @@
 * Utiliser `ng-content` pour simplifier la transmission de contenu. 
 * Penser  - Reactive Programming.
 
+**Décorateurs TypeScript**
+> Les décorateurs ou annotations sont de fonctions appliquées sur le code qu'elles précèdent.
+
+*Les décorateurs Angular sont aux nombre de **19***
+
+
+**Création**
+* `@NgModule`      
+* `@Component` 
+* `@Pipe`   
+* `@Directive`
+* `@Injectable`  
+
+**Communication**
+* `@Attribute`
+* `@Input`
+* `@Output`  
+* `@ViewChild`
+* `@ViewChildren`
+* `@ContentChild`
+* `@ContentChildren`
+* `@HostBinding`
+* `@HostListener`
+
+**Injection**
+* `@Inject`
+* `@Optional`
+* `@Host`
+* `@Self`
+* `@SkipSelf`
+
+# Angular Test Unitaire
+
+> `ng test --project=PROJECT_NAME`
+
+* `*.spec.ts`
+
+**Etape d'un test.**
+
+* `describe`
+* `beforeEach`
+* `afterEach`
+* `it`
+
+**Utilitaires Angular**
+
+* `TestBed.configureTestingModule`
+* `fixture` - Wrapper utilitaire
+* `component` - intance
+
+
+# Angular Component : Template
+
+> (DSL) angular propose des expressions spécifique pour lier (`binding`) le code j'avascript d'un composant au template HTML de celui-ci.
+
+```html
+
+<!-- Liaison Textuelle -->
+{{ expressionAsString }}
+
+<!-- Valorisation Attribut -->
+<element [attributeName]="expressionAsValue"></element>
+
+<!-- Evenement -->
+<element (eventName)="expressionAsFunction"></element>
+
+<!-- Directive : enrichissment -->
+<ul>
+    <li *ngFor="let value of collectionValue">{{value}}</li>
+</ul>
+
+<!-- Pipe : transformation -->
+{{ objectValue | json }}
+
+<ng-container></ng-container>
+
+<ng-container [ngTemplateOutlet]="templateName"></ng-container>
+
+<ng-container [ngComponentOutlet]="expr"></ng-container>
+
+<ng-template #templateName></ng-template>
+
+```

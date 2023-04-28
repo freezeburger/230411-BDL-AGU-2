@@ -133,6 +133,39 @@
           }
         }
       }
+    },
+    "bdl-auth": {
+      "projectType": "library",
+      "root": "projects/bdl-auth",
+      "sourceRoot": "projects/bdl-auth/src",
+      "prefix": "bdl-auth",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bdl-auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bdl-auth/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bdl-auth/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/bdl-auth/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

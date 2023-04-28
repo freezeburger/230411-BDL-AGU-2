@@ -14,7 +14,12 @@
     "bdl:test-report": "ng test --project=bdl --code-coverage --watch=false",
     "bdl:doc": "compodoc -p ./projects/bdl/tsconfig.doc.json -s --output ./documentation/bdl-lib",
     "prebdl:pack": "npm run bdl:build",
-    "bdl:pack": "npm pack ./dist/bdl"
+    "prebdl-auth:pack": "npm run build --project=bdl-auth",
+    "bdl-auth:build": "ng build --project=bdl-auth",
+    "bdl-auth:pack": "npm pack ./dist/bdl-auth",
+    "bdl-auth:test": "ng test --project=bdl-auth",
+    "bdl-auth:doc": "compodoc -p ./projects/bdl-auth/tsconfig.doc.json -s --output ./documentation/bdl-auth"
+
   },
   "private": true,
   "dependencies": {

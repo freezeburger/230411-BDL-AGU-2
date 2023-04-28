@@ -11,6 +11,8 @@
         "projects/bdl/src/public-api.ts"
       ],
       "bdl-auth": [
+        "dist/bdl-auth",
+        "dist/bdl-auth",
         "dist/bdl-auth"
       ]
     },
