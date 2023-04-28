@@ -1,15 +1,28 @@
+<bdl-ui-layout revealMenu>
+
+  <layout-content header asPageTitle>Messages</layout-content>
+
+  <layout-content>
+    <h2>Messages</h2>
+
+    <ng-container *ngIf=" (messageSrv.data$ | async  ) as messages">
+
+      <div class="alert alert-info" *ngIf=" messages.length === 0 "> Pas de messages.</div>
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let msg of messages">{{msg | json}}</li>
+      </ul>
+
+      <button (click)="send()">Send</button>
+
+    </ng-container>
+
+  </layout-content>
+
+  <layout-content menu>
+    MENU CONTENT
+  </layout-content>
+
+</bdl-ui-layout>
 
 
-<h2>Messages</h2>
-
-<ng-container *ngIf=" (messageSrv.data$ | async  ) as messages">
-
-  <div class="alert alert-info" *ngIf=" messages.length === 0 "> Pas de messages.</div>
-
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let msg of messages">{{msg | json}}</li>
-  </ul>
-
-  <button (click)="send()">Send</button>
-
-</ng-container>

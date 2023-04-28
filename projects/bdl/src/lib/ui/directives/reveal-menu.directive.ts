@@ -33,7 +33,6 @@ export class RevealMenuDirective implements AfterViewInit, AfterContentInit {
 
     const opened = this.menuElement.style.display === 'block';
     this.menuElement.style.display =  opened ? 'none':'block';
-    console.log(this.menuElement)
   }
 
 

@@ -8,11 +8,9 @@ import { UiLayoutContentComponent } from '../ui-layout-content/ui-layout-content
 })
 export class UiLayoutComponent implements AfterContentInit {
 
-
   @ContentChildren(UiLayoutContentComponent) contents!:QueryList<UiLayoutContentComponent>;
 
   ngAfterContentInit(): void {
-    console.log(this.contents)
     if(this.contents.length < 1 ) console.log('%c You should have at least one "layout-content" ', 'color:hotPink;font-size:30px')
   }
 
