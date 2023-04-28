@@ -7,6 +7,7 @@ import { BdlCredentials } from '../interfaces/bdl-credentials';
 export class BdlAuthService implements BdlAuthentificationService {
 
   connect(credentials: BdlCredentials): Observable<AuthResponse> {
+    console.table( credentials );
     return of({
       code: AuthResponseCode.DEVELOPMENT,
       message: 'Not Implemented'

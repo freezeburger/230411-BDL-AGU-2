@@ -6,7 +6,7 @@
 export * from './lib/bdl-auth.module';
 
 // Components
-export * from './lib/bdl-auth.component';
+export * from './lib/components/bdl-auth.component';
 
 // Services
 export * from './lib/services/bdl-auth.service';

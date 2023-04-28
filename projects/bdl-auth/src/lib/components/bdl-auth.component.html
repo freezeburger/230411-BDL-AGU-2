@@ -1,1 +1,7 @@
-BDl AUTH
+<div class="card d-flex flex-column p-3 m-5">
+  <form [formGroup]="authForm">
+    <input type="text" class="form-control m-1" placeholder="Your email" formControlName="email">
+    <input type="text" class="form-control m-1" placeholder="Your password" formControlName="password">
+    <button class="btn btn-primary  m-1" (click)="auth()" [disabled]="authForm.invalid">Connect </button>
+  </form>
+</div>
