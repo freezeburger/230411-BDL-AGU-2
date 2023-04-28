@@ -8,16 +8,28 @@
 </head>
 <body>
 
-  <code>
+  <p>
     https://developer.mozilla.org/fr/docs/Web/API/Web_components
-  </code>
+  </p>
 
-  <code>
+  <p>
     https://www.webcomponents.org/introduction
-  </code>
+  </p>
 
   <lux-component></lux-component>
+  <lux-component></lux-component>
+  <lux-component></lux-component>
 
-  <script></script>
+  <script>
+    class LuxComponent extends HTMLElement{
+      constructor(){
+        super()
+      }
+      connectedCallback(){
+        this.innerHTML = '<h1>Welcome to Luxembourg</h1>'
+      }
+    }
+    customElements.define('lux-component', LuxComponent )
+  </script>
 </body>
 </html>
