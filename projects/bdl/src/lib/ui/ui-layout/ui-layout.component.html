@@ -1,0 +1,40 @@
+
+<!-- Header -->
+<ng-container [ngTemplateOutlet]="header"></ng-container>
+<!-- Main -->
+<ng-container [ngTemplateOutlet]="main"></ng-container>
+<!-- Footer -->
+<ng-container [ngTemplateOutlet]="footer"></ng-container>
+<!-- Menu -->
+<ng-container [ngTemplateOutlet]="menu"></ng-container>
+
+
+<!-- Header -->
+<ng-template #header>
+  <bdl-ui-header>
+    <ng-content select=".header"></ng-content>
+  </bdl-ui-header>
+  <bdl-ui-navigation></bdl-ui-navigation>
+  <bdl-ui-notification></bdl-ui-notification>
+</ng-template>
+
+<!-- Main -->
+<ng-template #main>
+  <main>
+    <ng-content></ng-content>
+  </main>
+</ng-template>
+
+<!-- Footer -->
+<ng-template #footer>
+  <footer>
+    <ng-content select=".footer"></ng-content>
+  </footer>
+</ng-template>
+
+<!-- Menu -->
+<ng-template #menu>
+  <aside>
+    <ng-content select=".menu"></ng-content>
+  </aside>
+</ng-template>

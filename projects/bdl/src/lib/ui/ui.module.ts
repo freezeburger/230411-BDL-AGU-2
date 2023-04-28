@@ -7,6 +7,7 @@ import { UiNotificationComponent } from './ui-notification/ui-notification.compo
 import { UiButtonComponent } from './ui-button/ui-button.component';
 import { InactiveDirective } from './directives/inactive.directive';
 import { UiButtonOptionsComponent } from './ui-button-options/ui-button-options.component';
+import { UiLayoutComponent } from './ui-layout/ui-layout.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UiButtonOptionsComponent } from './ui-button-options/ui-button-options.
     UiNotificationComponent,
     UiButtonComponent,
     InactiveDirective,
-    UiButtonOptionsComponent
+    UiButtonOptionsComponent,
+    UiLayoutComponent
   ],
   imports: [
     NgImportModule
@@ -28,7 +30,8 @@ import { UiButtonOptionsComponent } from './ui-button-options/ui-button-options.
     UiNotificationComponent,
     UiButtonComponent,
     InactiveDirective,
-    UiButtonOptionsComponent
+    UiButtonOptionsComponent,
+    UiLayoutComponent
   ]
 })
 export class UiModule { }
